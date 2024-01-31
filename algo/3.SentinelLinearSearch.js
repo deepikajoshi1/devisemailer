@@ -19,6 +19,10 @@ function sentinelLinearSearch(arr, target) {
   }
 }
 
+
+
+
+
 function runSentinelSearch(array, targetElement) {
   const result = sentinelLinearSearch(array, targetElement);
 
