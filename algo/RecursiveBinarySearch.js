@@ -19,22 +19,22 @@ function binarySearchRecursive(arr, target, start = 0, end = arr.length - 1) {
   // Case1. Equal:(if statement)
   if (arr[mid] === target) {
     return mid;
-    // Case2. Less:(if-else statement)
+    // Case2. Less:(else-if statement)
   } else if (arr[mid] < target) {
-    // Recursive call:
-    return binarySearchRecursive(arr, target, mid + 1, end);
-    // Case 3. Greater:(else statement)
-    // Recursive call:
-  } else {
-    return binarySearchRecursive(arr, target, start, mid - 1);
+      // Recursive call:
+      return binarySearchRecursive(arr, target, mid + 1, end);
+      // Case 3. Greater:(else statement)
+      // Recursive call:
+    } else {
+      return binarySearchRecursive(arr, target, start, mid - 1);
+    }
   }
-}
 // Example:
-const sortedArray=[1,2,3,4,5,6,7,8,9,10];
-const targetElement=7;
-const result = binarySearchRecursive(sortedArray,targetElement);
-if(result !== -1){
-  console.log(`Element ${targetElement} found at index ${result}`);
+const sortedArray = [1,2,3,4,5,6,7,8,9,10];
+const targetElement = 7;
+const result = binarySearchRecursive(sortedArray, targetElement);
+if (result !== -1){
+  console.log(`Element${targetElement}found at index ${result}`);
 }else{
-  console.log(`Element ${targetElement}not found in the array`);
+  console.log(`Element${targetElement}not found in the array`);
 }

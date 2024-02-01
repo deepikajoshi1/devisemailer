@@ -18,11 +18,6 @@ function sentinelLinearSearch(arr, target) {
     return -1;
   }
 }
-
-
-
-
-
 function runSentinelSearch(array, targetElement) {
   const result = sentinelLinearSearch(array, targetElement);
 
@@ -42,3 +37,6 @@ runSentinelSearch(arr1, target1);
 const arr2 = [5,12,6,20,15];
 const target2 = 6;
 runSentinelSearch(arr2, target2);
+
+
+
